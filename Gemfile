@@ -32,14 +32,17 @@ group :development, :test do
   gem 'faker'
   gem 'rspec-rails'
 end
-group :production do
-  gem 'rails_12factor'
-end
 group :test do
-  gem 'capybara', '~> 2.7.1'
+  gem 'capybara', '~> 2.10', '>= 2.10.1'
   gem 'database_cleaner'
   gem 'launchy'
   gem 'selenium-webdriver'
 end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+gem 'carrierwave'
+gem 'carrierwave-aws'
+gem 'carrierwave-postgresql'
+gem 'mini_magick'
+gem 'dotenv-rails', groups: [:development, :test], require: 'dotenv/rails-now'
+gem 'postgresql_lo_streamer'

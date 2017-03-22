@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  mount PostgresqlLoStreamer::Engine => "/product_thumbnail"
+  resources :photos
+  resources :products
+
   root to: 'visitors#index'
   devise_for :users
   resources :users
